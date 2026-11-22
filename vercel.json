@@ -4,6 +4,24 @@
   "redirects": [
     {
       "source": "/(.*)",
+      "has": [{ "type": "host", "value": "action-sciage.fr" }],
+      "destination": "https://actionsciage.com/$1",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "www.action-sciage.fr" }],
+      "destination": "https://actionsciage.com/$1",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "www.actionsciage.com" }],
+      "destination": "https://actionsciage.com/$1",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
       "has": [{ "type": "host", "value": "action-sciage.com" }],
       "destination": "https://actionsciage.com/$1",
       "permanent": true

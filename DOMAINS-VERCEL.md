@@ -1,19 +1,20 @@
 # Domain Strategy, Cloudflare Registrar & Vercel Guide — Action Sciage
 
-All domain checks below were verified live against official Verisign (`.com`), AFNIC (`.fr`), SWITCH (`.ch`), and DENIC (`.de`) RDAP registries on **2026-11-22**.
+Live status verified on **2026-11-22**.
 
 ---
 
-## 1. What to Buy on Cloudflare Registrar vs Keep at IONOS
+## 1. Domain & DNS Status
 
-**Important Cloudflare Registrar Note:** Cloudflare Registrar supports **`.com`** domains at wholesale cost, but **does NOT currently support `.fr`, `.de`, or `.ch`** direct registration/transfers.
-
-| Role | Domain | Registry Status | Where to Manage |
+| Role | Domain | Status | Where Managed |
 | :--- | :--- | :--- | :--- |
-| **Global Primary Canonical** | **`actionsciage.com`** | **AVAILABLE** | **Buy on Cloudflare Registrar** |
-| **Hyphenated International Alias** | **`action-sciage.com`** | **AVAILABLE** | **Buy on Cloudflare Registrar** (`301` -> `actionsciage.com`) |
-| **Optional Local SEO Alias** | `sciagebetonalsace.com` (or `sciagealsace.com`) | **AVAILABLE** | **Optional `.com` on Cloudflare Registrar** (`301` -> `actionsciage.com/fr`) |
-| **Existing French Brand Domain** | **`action-sciage.fr`** | **ACTIVE (Owned)** | **Keep registered on IONOS** (point web DNS to Vercel or Cloudflare DNS Free) |
+| **Global Primary Canonical** | **`actionsciage.com`** | **ACTIVE (Cloudflare + Vercel Live)** | Cloudflare Registrar -> Vercel (`200 OK` on `/fr`) |
+| **Hyphenated International Alias** | **`action-sciage.com`** | **ACTIVE (`308` -> `actionsciage.com`)** | Cloudflare Registrar -> Vercel |
+| **Existing French Brand Domain** | **`action-sciage.fr`** | **Registered at IONOS (Email Active)** | IONOS (`vercel.json` pre-configured `301` -> `actionsciage.com`) |
+| **Optional Local SEO Aliases** | `sciagebetonalsace.com`, `sciagealsace.com`, `demolitionalsace.com` | **AVAILABLE** | Optional `.com` on Cloudflare Registrar (`301` -> `/fr`) |
+
+> [!NOTE]
+> Live SSL check on `2026-11-22` showed `www.actionsciage.com` missing a matching TLS SAN (`curl: (60)`). In Cloudflare DNS add `CNAME www -> cname.vercel-dns.com.` (Grey Cloud / DNS Only) and attach `www.actionsciage.com` under **Vercel -> Project -> Settings -> Domains** (pointing to `actionsciage.com`). On Vercel, also point `action-sciage.com` directly to `actionsciage.com` to skip the intermediate `www.action-sciage.com` hop.
 
 ---
 
@@ -29,9 +30,8 @@ Whether you manage DNS at IONOS or move DNS (via Free Cloudflare DNS NS) for `ac
 
 ---
 
-## 3. Deploying on Vercel
+## 3. Post-Launch SEO Actions (Unlocked Now)
 
-1. Go to [https://vercel.com/new](https://vercel.com/new) and import `emestud/action-sciage`.
-2. Leave **Framework Preset** as `Other`, **Build Command** empty, **Output Directory** as `.`.
-3. Under **Project -> Settings -> Domains**, attach `actionsciage.com`, `www.actionsciage.com`, `action-sciage.com`, `www.action-sciage.com`, `action-sciage.fr`, and `www.action-sciage.fr`.
-4. Submit `https://actionsciage.com/sitemap.xml` in **Google Search Console**.
+1. **Google Search Console:** Add Domain Property `actionsciage.com` (auto-verified via Cloudflare DNS) and submit `https://actionsciage.com/sitemap.xml`.
+2. **Google Business Profile & Socials:** Update Lucas Gaidella's Action Sciage (Wittenheim) website URL on Google Business Profile and Facebook (`facebook.com/actionsciage/`) to `https://actionsciage.com/fr`.
+3. **Optional `action-sciage.fr` cutover:** Point `action-sciage.fr` web records (`A @ -> 76.76.21.21`, `CNAME www -> cname.vercel-dns.com.`) to Vercel while leaving IONOS `MX` / `SPF` / `DKIM` untouched; `vercel.json` already permanently `301`-redirects all legacy URLs (`/societe`, `/contact`, `/actualites-2`, etc.) to `actionsciage.com`.
