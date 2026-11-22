@@ -1769,6 +1769,81 @@ p {
 }
 
 /* ==========================================================================
+   Action Sciage Faceted Diamond Structural Emblem (Rubis)
+   ========================================================================== */
+
+.rubis-callout-card {
+  margin-top: 2.75rem;
+  padding: 2rem 2.25rem;
+  border-radius: var(--radius-lg);
+  background: var(--pure-cut);
+  border: 1px solid var(--concrete-line);
+  border-left: 4px solid var(--saw-pink);
+  box-shadow: var(--shadow-light);
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  gap: 2rem;
+}
+
+@media (min-width: 960px) {
+  .rubis-callout-card {
+    grid-template-columns: 1fr 240px;
+  }
+}
+
+.rubis-callout-copy {
+  max-width: 720px;
+}
+
+.rubis-emblem-wrap {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.rubis-diamond-img {
+  width: min(230px, 70vw);
+  height: auto;
+  display: block;
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), filter 0.45s ease;
+}
+
+.rubis-emblem-wrap:hover .rubis-diamond-img,
+.rubis-charter-badge:hover .rubis-diamond-img {
+  transform: translateY(-4px) scale(1.025);
+  filter: drop-shadow(0 12px 24px rgba(230, 0, 126, 0.16));
+}
+
+.rubis-emblem-wrap figcaption {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-dark-muted);
+  text-align: center;
+}
+
+.rubis-charter-badge {
+  background: var(--pure-cut);
+  border: 1px solid var(--concrete-line);
+  border-radius: var(--radius-lg);
+  padding: 0.9rem 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: var(--shadow-light);
+}
+
+.rubis-charter-badge .rubis-diamond-img {
+  width: 96px;
+}
+
+/* ==========================================================================
    Reviews & Three-Borders Zone
    ========================================================================== */
 
@@ -2061,6 +2136,9 @@ p {
   }
   .arch-rebar-grid {
     transform: none !important;
+  }
+  .rubis-diamond-img {
+    transition: none !important;
   }
   .saw-divider-beam {
     transform: rotate(-3.5deg) scaleX(1) !important;
