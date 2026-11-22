@@ -257,7 +257,7 @@
     buildBrief();
   }
 
-  /* 6. Cross-Browser Spinning 20-Keyhole Pink Saw Favicon on Pure White Background */
+  /* 6. Cross-Browser Spinning 20-Keyhole Pink Saw Favicon on Transparent Background */
   if (!prefersReduced && typeof document.createElement === "function") {
     var iconLink = document.querySelector('link[rel="icon"]');
     var favCanvas = document.createElement("canvas");
@@ -270,51 +270,49 @@
       function renderFaviconFrame() {
         if (document.hidden) return;
         fctx.clearRect(0, 0, 64, 64);
-        // Pure white rounded background
-        fctx.fillStyle = "#FFFFFF";
-        fctx.beginPath();
-        fctx.roundRect(0, 0, 64, 64, 14);
-        fctx.fill();
 
         fctx.save();
         fctx.translate(32, 32);
         fctx.rotate(favAngle);
 
         // Pink segmented diamond saw disc
+        fctx.globalCompositeOperation = "source-over";
         fctx.fillStyle = "#E6007E";
         fctx.beginPath();
-        fctx.arc(0, 0, 27, 0, Math.PI * 2);
+        fctx.arc(0, 0, 30, 0, Math.PI * 2);
         fctx.fill();
 
-        // 20 white keyhole expansion slots around rim
-        fctx.fillStyle = "#FFFFFF";
+        // Punch out 20 transparent keyhole expansion slots + center arbor hole
+        fctx.globalCompositeOperation = "destination-out";
+        fctx.fillStyle = "#000000";
         for (var k = 0; k < 20; k++) {
           var a = (k * Math.PI * 2) / 20;
           fctx.save();
           fctx.rotate(a);
-          fctx.fillRect(-0.8, -28.5, 1.6, 4.4);
+          fctx.fillRect(-0.9, -31.5, 1.8, 5.0);
           fctx.beginPath();
-          fctx.arc(0, -24.2, 1.4, 0, Math.PI * 2);
+          fctx.arc(0, -26.5, 1.6, 0, Math.PI * 2);
           fctx.fill();
           fctx.restore();
         }
-
-        // Tension rings so spin motion stays legible at 16px
-        fctx.strokeStyle = "#FFFFFF";
-        fctx.lineWidth = 2;
-        fctx.setLineDash([10, 12]);
-        fctx.beginPath();
-        fctx.arc(0, 0, 17, 0, Math.PI * 2);
-        fctx.stroke();
-        fctx.setLineDash([]);
-
-        // White arbor hole
-        fctx.fillStyle = "#FFFFFF";
-        fctx.strokeStyle = "#111317";
-        fctx.lineWidth = 2;
         fctx.beginPath();
         fctx.arc(0, 0, 5.5, 0, Math.PI * 2);
         fctx.fill();
+
+        // Tension rings + arbor collar so spin motion stays legible at 16px on dark or light tabs
+        fctx.globalCompositeOperation = "source-over";
+        fctx.strokeStyle = "#FFFFFF";
+        fctx.lineWidth = 2.2;
+        fctx.setLineDash([11, 13]);
+        fctx.beginPath();
+        fctx.arc(0, 0, 19, 0, Math.PI * 2);
+        fctx.stroke();
+        fctx.setLineDash([]);
+
+        fctx.strokeStyle = "#FFFFFF";
+        fctx.lineWidth = 1.8;
+        fctx.beginPath();
+        fctx.arc(0, 0, 6.2, 0, Math.PI * 2);
         fctx.stroke();
         fctx.restore();
 
