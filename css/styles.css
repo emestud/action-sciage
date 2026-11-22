@@ -40,7 +40,7 @@
   --radius: 8px;
   --radius-lg: 12px;
   --container: 1260px;
-  --header-h: 72px;
+  --header-h: 82px;
   --kerf-angle: -3.5deg;
   --shadow-dark: 0 22px 54px rgba(0, 0, 0, 0.48);
   --shadow-light: 0 14px 36px rgba(14, 16, 19, 0.08);
@@ -231,58 +231,62 @@ p {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  shrink: 0;
-}
-
-.brand-saw-badge {
-  width: 38px;
-  height: 38px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 999px;
-  background: rgba(230, 0, 126, 0.12);
-  border: 1px solid rgba(230, 0, 126, 0.4);
   flex-shrink: 0;
 }
 
-.brand-saw-svg {
-  width: 28px;
-  height: 28px;
-  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+.official-logo-svg {
+  display: block;
+  width: auto;
+  overflow: visible;
+}
+
+.official-logo-svg .logo-blade-rotor {
+  transform-box: view-box;
+  transform-origin: 280.8px 147.55px;
+  animation: sawSpin 34s linear infinite;
   will-change: transform;
 }
 
-.brand:hover .brand-saw-svg {
-  transform: rotate(135deg);
+.official-logo-svg .logo-kerf-glint {
+  opacity: 0.35;
+  transition: opacity 0.25s ease;
 }
 
-.brand-logo-img {
-  height: 38px;
+.header-official-logo {
+  height: 54px;
   width: auto;
+  filter: drop-shadow(0 2px 10px rgba(230, 0, 126, 0.28));
 }
 
-.brand-text {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.05;
+@media (min-width: 768px) {
+  .header-official-logo {
+    height: 62px;
+  }
 }
 
-.brand-title {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 1rem;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: var(--pure-cut);
+.brand:hover .header-official-logo .logo-blade-rotor {
+  animation-duration: 5s;
 }
 
-.brand-sub {
+.brand:hover .header-official-logo .logo-kerf-glint {
+  opacity: 0.9;
+}
+
+.brand-sub-tag {
+  display: none;
   font-family: var(--font-mono);
-  font-size: 0.65rem;
+  font-size: 0.68rem;
   letter-spacing: 0.08em;
-  color: var(--saw-rose);
+  color: var(--ink-light-muted);
   text-transform: uppercase;
+  padding-left: 0.65rem;
+  border-left: 1px solid var(--steel-line);
+}
+
+@media (min-width: 1280px) {
+  .brand-sub-tag {
+    display: inline-block;
+  }
 }
 
 .nav-links {
@@ -885,26 +889,45 @@ p {
   pointer-events: none;
 }
 
-.hero-saw-emblem {
+.hero-logo-emblem {
   position: absolute;
-  top: -28px;
-  right: -18px;
-  width: 132px;
-  height: 132px;
+  top: -36px;
+  right: -12px;
+  width: clamp(235px, 58%, 315px);
+  padding: 0.65rem 0.85rem;
+  border-radius: var(--radius-lg);
+  background: rgba(14, 16, 19, 0.86);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(230, 0, 126, 0.45);
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.58), 0 0 28px rgba(230, 0, 126, 0.25);
   display: flex;
   align-items: center;
   justify-content: center;
   pointer-events: auto;
-  animation: sawHeroSweep 1.15s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation: splitPlaneTop 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 @media (min-width: 768px) {
-  .hero-saw-emblem {
-    width: 158px;
-    height: 158px;
-    top: -36px;
-    right: -24px;
+  .hero-logo-emblem {
+    top: -42px;
+    right: -22px;
+    width: 340px;
   }
+}
+
+.hero-official-logo {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 0 16px rgba(230, 0, 126, 0.45));
+}
+
+.hero-official-logo .logo-blade-rotor {
+  animation-duration: 24s;
+}
+
+.hero-stage:hover .hero-official-logo .logo-blade-rotor {
+  animation-duration: 4.5s;
 }
 
 .hero-saw-rotor {
@@ -914,11 +937,6 @@ p {
   animation: sawSpin 28s linear infinite;
   transition: filter 0.3s ease;
   will-change: transform;
-}
-
-.hero-stage:hover .hero-saw-rotor {
-  animation-duration: 7s;
-  filter: drop-shadow(0 0 30px rgba(230, 0, 126, 0.85));
 }
 
 .hero-photo-caption {
@@ -1808,7 +1826,8 @@ p {
   html {
     scroll-behavior: auto;
   }
-  .hero-saw-emblem,
+  .hero-logo-emblem,
+  .official-logo-svg .logo-blade-rotor,
   .hero-saw-rotor,
   .hero-kerf-line,
   .hero-title-top,
