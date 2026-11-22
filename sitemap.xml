@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://actionsciage.com/fr</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://actionsciage.com/fr" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://actionsciage.com/en" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://actionsciage.com/de" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://actionsciage.com/fr" />
+  </url>
+  <url>
+    <loc>https://actionsciage.com/en</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://actionsciage.com/fr" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://actionsciage.com/en" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://actionsciage.com/de" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://actionsciage.com/fr" />
+  </url>
+  <url>
+    <loc>https://actionsciage.com/de</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://actionsciage.com/fr" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://actionsciage.com/en" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://actionsciage.com/de" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://actionsciage.com/fr" />
+  </url>
+  <url>
+    <loc>https://actionsciage.com/fr/prestations</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://actionsciage.com/fr/prestations" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://actionsciage.com/en/services" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://actionsciage.com/de/leistungen" />
+  </url>
+  <url>
+    <loc>https://actionsciage.com/en/services</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://actionsciage.com/fr/prestations" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://actionsciage.com/en/services" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://actionsciage.com/de/leistungen" />
+  </url>
+  <url>
+    <loc>https://actionsciage.com/de/leistungen</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://actionsciage.com/fr/prestations" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://actionsciage.com/en/services" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://actionsciage.com/de/leistungen" />
+  </url>
+  <url>
+    <loc>https://actionsciage.com/fr/realisations</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://actionsciage.com/fr/realisations" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://actionsciage.com/en/projects" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://actionsciage.com/de/referenzen" />
+  </url>
+  <url>
+    <loc>https://actionsciage.com/en/projects</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://actionsciage.com/fr/realisations" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://actionsciage.com/en/projects" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://actionsciage.com/de/referenzen" />
+  </url>
+  <url>
+    <loc>https://actionsciage.com/de/referenzen</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://actionsciage.com/fr/realisations" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://actionsciage.com/en/projects" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://actionsciage.com/de/referenzen" />
+  </url>
+  <url>
+    <loc>https://actionsciage.com/fr/entreprise</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://actionsciage.com/fr/entreprise" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://actionsciage.com/en/company" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://actionsciage.com/de/unternehmen" />
+  </url>
+  <url>
+    <loc>https://actionsciage.com/en/company</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://actionsciage.com/fr/entreprise" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://actionsciage.com/en/company" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://actionsciage.com/de/unternehmen" />
+  </url>
+  <url>
+    <loc>https://actionsciage.com/de/unternehmen</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://actionsciage.com/fr/entreprise" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://actionsciage.com/en/company" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://actionsciage.com/de/unternehmen" />
+  </url>
+  <url>
+    <loc>https://actionsciage.com/fr/contact</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://actionsciage.com/fr/contact" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://actionsciage.com/en/contact" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://actionsciage.com/de/kontakt" />
+  </url>
+  <url>
+    <loc>https://actionsciage.com/en/contact</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://actionsciage.com/fr/contact" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://actionsciage.com/en/contact" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://actionsciage.com/de/kontakt" />
+  </url>
+  <url>
+    <loc>https://actionsciage.com/de/kontakt</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://actionsciage.com/fr/contact" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://actionsciage.com/en/contact" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://actionsciage.com/de/kontakt" />
+  </url>
+  <url>
+    <loc>https://actionsciage.com/fr/mentions-legales</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://actionsciage.com/fr/mentions-legales" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://actionsciage.com/en/legal" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://actionsciage.com/de/impressum" />
+  </url>
+  <url>
+    <loc>https://actionsciage.com/en/legal</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://actionsciage.com/fr/mentions-legales" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://actionsciage.com/en/legal" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://actionsciage.com/de/impressum" />
+  </url>
+  <url>
+    <loc>https://actionsciage.com/de/impressum</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://actionsciage.com/fr/mentions-legales" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://actionsciage.com/en/legal" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://actionsciage.com/de/impressum" />
+  </url>
+</urlset>

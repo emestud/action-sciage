@@ -1,0 +1,106 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "action-sciage.com" }],
+      "destination": "https://actionsciage.com/$1",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "www.action-sciage.com" }],
+      "destination": "https://actionsciage.com/$1",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "actionsciage.de" }],
+      "destination": "/de",
+      "permanent": false
+    },
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "www.actionsciage.de" }],
+      "destination": "/de",
+      "permanent": false
+    },
+    {
+      "source": "/",
+      "destination": "/fr",
+      "permanent": false
+    },
+    {
+      "source": "/societe",
+      "destination": "/fr/entreprise",
+      "permanent": true
+    },
+    {
+      "source": "/deconstruction-sciages-carottages-demolition-interieur",
+      "destination": "/fr/prestations",
+      "permanent": true
+    },
+    {
+      "source": "/actualites-2",
+      "destination": "/fr/realisations",
+      "permanent": true
+    },
+    {
+      "source": "/temoignages",
+      "destination": "/fr/realisations#avis",
+      "permanent": true
+    },
+    {
+      "source": "/contact",
+      "destination": "/fr/contact",
+      "permanent": true
+    },
+    {
+      "source": "/mentions-legales",
+      "destination": "/fr/mentions-legales",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=31536000; includeSubDomains; preload"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
+      ]
+    },
+    {
+      "source": "/(css|js)/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/images/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, must-revalidate"
+        }
+      ]
+    }
+  ]
+}
