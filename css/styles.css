@@ -602,23 +602,26 @@ p {
 }
 
 /* ==========================================================================
-   Architectural Poured Concrete & Exposed HA Steel Rebar Textures
+   Swiss Architectural Fair-Faced Concrete & Structural Cadence (Stitch MCP)
    ========================================================================== */
 
 .cad-grid-dark {
   background-color: var(--obsidian);
   background-image:
-    radial-gradient(circle at 82% 18%, rgba(230, 0, 126, 0.08), transparent 48%),
-    url("/images/bg-concrete-rebar-dark.svg");
-  background-size: 100% 100%, 560px 560px;
+    linear-gradient(112deg, rgba(12, 14, 18, 0.93) 0%, rgba(14, 16, 20, 0.80) 52%, rgba(14, 16, 20, 0.68) 100%),
+    url("/images/concrete-arch-dark.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 .section-obsidian {
   background-color: var(--obsidian);
   background-image:
-    radial-gradient(circle at 15% 15%, rgba(255, 255, 255, 0.025), transparent 55%),
-    url("/images/bg-concrete-rebar-dark.svg");
-  background-size: 100% 100%, 560px 560px;
+    linear-gradient(180deg, rgba(14, 16, 19, 0.90), rgba(14, 16, 19, 0.92)),
+    url("/images/concrete-arch-dark.jpg");
+  background-size: cover;
+  background-position: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
   color: var(--ink-light);
   padding: 4.75rem 0;
   position: relative;
@@ -627,9 +630,11 @@ p {
 .section-obsidian-elevated {
   background-color: var(--obsidian-low);
   background-image:
-    radial-gradient(circle at 85% 20%, rgba(230, 0, 126, 0.05), transparent 52%),
-    url("/images/bg-concrete-rebar-dark.svg");
-  background-size: 100% 100%, 560px 560px;
+    linear-gradient(180deg, rgba(18, 21, 26, 0.90), rgba(18, 21, 26, 0.92)),
+    url("/images/concrete-arch-dark.jpg");
+  background-size: cover;
+  background-position: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
   color: var(--ink-light);
   padding: 4.5rem 0;
   position: relative;
@@ -637,8 +642,11 @@ p {
 
 .section-concrete {
   background-color: var(--concrete);
-  background-image: url("/images/bg-concrete-rebar-light.svg");
-  background-size: 520px 520px;
+  background-image:
+    linear-gradient(180deg, rgba(245, 245, 242, 0.82), rgba(245, 245, 242, 0.86)),
+    url("/images/concrete-arch-light.jpg");
+  background-size: cover;
+  background-position: center;
   color: var(--ink-dark);
   padding: 4.75rem 0;
   position: relative;
@@ -653,17 +661,20 @@ p {
 
 .section-concrete-panel {
   background-color: var(--concrete-panel);
-  background-image: url("/images/bg-concrete-rebar-light.svg");
-  background-size: 520px 520px;
+  background-image:
+    linear-gradient(180deg, rgba(234, 234, 229, 0.84), rgba(234, 234, 229, 0.86)),
+    url("/images/concrete-arch-light.jpg");
+  background-size: cover;
+  background-position: center;
   color: var(--ink-dark);
   padding: 4.5rem 0;
   position: relative;
 }
 
-/* Angled 3.5deg Sawn Concrete Seam + Exposed Severed Steel Rebars + Pink Saw Kerf */
+/* Clean Architectural -3.5deg Sawn Concrete Joint + Subtle Steel Datum Ticks + Pink Kerf */
 .saw-divider {
   position: relative;
-  height: 44px;
+  height: 38px;
   overflow: hidden;
   background: var(--obsidian);
 }
@@ -685,18 +696,13 @@ p {
   position: absolute;
   left: -4%;
   right: -4%;
-  top: calc(49% - 6px);
-  height: 12px;
-  background-image: radial-gradient(
-    circle,
-    #CBD4E1 0 2.2px,
-    #2B3240 2.3px 3.8px,
-    rgba(230, 0, 126, 0.35) 3.9px 5px,
-    transparent 5.2px
+  top: calc(49% - 1.5px);
+  height: 3px;
+  background-image: repeating-linear-gradient(
+    90deg,
+    transparent 0 178px,
+    rgba(226, 232, 240, 0.45) 178px 180px
   );
-  background-size: 104px 12px;
-  background-repeat: repeat-x;
-  background-position: center;
   transform: rotate(-3.5deg);
   pointer-events: none;
   z-index: 1;
@@ -707,7 +713,7 @@ p {
   left: -4%;
   right: -4%;
   top: 49%;
-  height: 2.5px;
+  height: 2px;
   z-index: 2;
   background: linear-gradient(90deg, transparent 0%, var(--saw-pink) 18%, var(--saw-rose) 50%, var(--saw-pink) 82%, transparent 100%);
   box-shadow: 0 0 14px var(--saw-glow);
@@ -776,10 +782,10 @@ p {
 }
 
 /* ==========================================================================
-   Hero — Concrete in Deconstruction Backdrop + Split Plane + Pink Saw Kerf
+   Hero — Clean Architectural CAD Blueprint Overlay + Surgical Saw Kerf
    ========================================================================== */
 
-@keyframes deconSawPass {
+@keyframes archKerfPass {
   0% {
     transform: translate3d(0, 0, 0);
     opacity: 0;
@@ -787,7 +793,7 @@ p {
   8% {
     opacity: 1;
   }
-  84% {
+  86% {
     opacity: 1;
   }
   100% {
@@ -796,31 +802,25 @@ p {
   }
 }
 
-@keyframes rebarCutGlow {
+@keyframes rebarNodePulse {
   0%, 100% {
-    opacity: 0.28;
+    opacity: 0.45;
+    stroke: #E2E8F0;
     filter: none;
   }
-  12%, 22% {
+  14%, 24% {
     opacity: 1;
-    filter: drop-shadow(0 0 8px #FF2E9F);
+    stroke: #FF59B2;
+    filter: drop-shadow(0 0 5px rgba(230, 0, 126, 0.65));
   }
-  42% {
-    opacity: 0.34;
+  44% {
+    opacity: 0.48;
+    stroke: #E2E8F0;
     filter: none;
   }
 }
 
-@keyframes concreteChipFloat {
-  from {
-    transform: translate3d(0, 0, 0) rotate(0deg);
-  }
-  to {
-    transform: translate3d(2px, -6px, 0) rotate(3deg);
-  }
-}
-
-.concrete-decon-scene {
+.arch-blueprint-scene {
   position: absolute;
   inset: 0;
   pointer-events: none;
@@ -828,53 +828,36 @@ p {
   overflow: hidden;
 }
 
-.concrete-decon-svg {
+.arch-blueprint-svg {
   width: 100%;
   height: 100%;
   display: block;
 }
 
-.concrete-decon-banner .concrete-decon-svg {
-  opacity: 0.78;
+.arch-blueprint-banner .arch-blueprint-svg {
+  opacity: 0.72;
 }
 
-.decon-slab-upper {
-  transform: translate3d(0, calc(var(--decon-parallax, 0px) * -0.35), 0);
+.arch-rebar-grid {
+  transform: translate3d(0, calc(var(--decon-parallax, 0px) * -0.25), 0);
   will-change: transform;
 }
 
-.decon-slab-lower {
-  transform: translate3d(0, calc(var(--decon-parallax, 0px) * 0.35), 0);
-  will-change: transform;
-}
-
-.decon-core-ring {
+.arch-caliper-ring {
   transform-box: fill-box;
   transform-origin: center;
-  animation: sawSpin 46s linear infinite;
+  animation: sawSpin 90s linear infinite;
   will-change: transform;
 }
 
-.decon-saw-pass {
-  animation: deconSawPass 7.5s cubic-bezier(0.35, 0, 0.25, 1) infinite;
+.arch-kerf-pass {
+  animation: archKerfPass 9s cubic-bezier(0.4, 0, 0.2, 1) infinite;
   will-change: transform, opacity;
 }
 
-.rebar-cut-tip {
-  animation: rebarCutGlow 7.5s ease-in-out infinite;
+.rebar-node-pulse {
+  animation: rebarNodePulse 9s ease-in-out infinite;
   animation-delay: var(--cut-delay, 0s);
-}
-
-.decon-chip {
-  transform-box: fill-box;
-  transform-origin: center;
-  animation: concreteChipFloat 10s ease-in-out infinite alternate;
-  will-change: transform;
-}
-
-.decon-chip:nth-child(2n) {
-  animation-duration: 12.5s;
-  animation-delay: -3.2s;
 }
 
 .hero {
@@ -2071,14 +2054,12 @@ p {
   .hero-kerf-line,
   .hero-title-top,
   .hero-title-bottom,
-  .decon-saw-pass,
-  .rebar-cut-tip,
-  .decon-chip,
-  .decon-core-ring {
+  .arch-kerf-pass,
+  .rebar-node-pulse,
+  .arch-caliper-ring {
     animation: none !important;
   }
-  .decon-slab-upper,
-  .decon-slab-lower {
+  .arch-rebar-grid {
     transform: none !important;
   }
   .saw-divider-beam {
