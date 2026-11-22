@@ -19,6 +19,9 @@
     var maxScroll = Math.max(1, doc.scrollHeight - window.innerHeight);
     var ratio = Math.min(1, Math.max(0, scrollTop / maxScroll));
     kerfFill.style.width = (ratio * 100).toFixed(2) + "%";
+    if (!prefersReduced) {
+      doc.style.setProperty("--decon-parallax", (ratio * 18).toFixed(1) + "px");
+    }
     if (kerfSaw && !prefersReduced) {
       kerfSaw.style.transform = "rotate(" + (scrollTop * 0.45).toFixed(1) + "deg)";
     }

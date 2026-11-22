@@ -602,33 +602,43 @@ p {
 }
 
 /* ==========================================================================
-   CAD Grid Textures & Section Alternation
+   Architectural Poured Concrete & Exposed HA Steel Rebar Textures
    ========================================================================== */
 
 .cad-grid-dark {
   background-color: var(--obsidian);
   background-image:
-    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-  background-size: 48px 48px;
+    radial-gradient(circle at 82% 18%, rgba(230, 0, 126, 0.08), transparent 48%),
+    url("/images/bg-concrete-rebar-dark.svg");
+  background-size: 100% 100%, 560px 560px;
 }
 
 .section-obsidian {
-  background: var(--obsidian);
+  background-color: var(--obsidian);
+  background-image:
+    radial-gradient(circle at 15% 15%, rgba(255, 255, 255, 0.025), transparent 55%),
+    url("/images/bg-concrete-rebar-dark.svg");
+  background-size: 100% 100%, 560px 560px;
   color: var(--ink-light);
   padding: 4.75rem 0;
   position: relative;
 }
 
 .section-obsidian-elevated {
-  background: var(--obsidian-low);
+  background-color: var(--obsidian-low);
+  background-image:
+    radial-gradient(circle at 85% 20%, rgba(230, 0, 126, 0.05), transparent 52%),
+    url("/images/bg-concrete-rebar-dark.svg");
+  background-size: 100% 100%, 560px 560px;
   color: var(--ink-light);
   padding: 4.5rem 0;
   position: relative;
 }
 
 .section-concrete {
-  background: var(--concrete);
+  background-color: var(--concrete);
+  background-image: url("/images/bg-concrete-rebar-light.svg");
+  background-size: 520px 520px;
   color: var(--ink-dark);
   padding: 4.75rem 0;
   position: relative;
@@ -642,16 +652,18 @@ p {
 }
 
 .section-concrete-panel {
-  background: var(--concrete-panel);
+  background-color: var(--concrete-panel);
+  background-image: url("/images/bg-concrete-rebar-light.svg");
+  background-size: 520px 520px;
   color: var(--ink-dark);
   padding: 4.5rem 0;
   position: relative;
 }
 
-/* Angled 3.5deg Pink Diamond-Saw Kerf Divider */
+/* Angled 3.5deg Sawn Concrete Seam + Exposed Severed Steel Rebars + Pink Saw Kerf */
 .saw-divider {
   position: relative;
-  height: 36px;
+  height: 44px;
   overflow: hidden;
   background: var(--obsidian);
 }
@@ -668,12 +680,35 @@ p {
   background: linear-gradient(176.5deg, var(--concrete) 48%, var(--obsidian-low) 50%);
 }
 
+.saw-divider::after {
+  content: "";
+  position: absolute;
+  left: -4%;
+  right: -4%;
+  top: calc(49% - 6px);
+  height: 12px;
+  background-image: radial-gradient(
+    circle,
+    #CBD4E1 0 2.2px,
+    #2B3240 2.3px 3.8px,
+    rgba(230, 0, 126, 0.35) 3.9px 5px,
+    transparent 5.2px
+  );
+  background-size: 104px 12px;
+  background-repeat: repeat-x;
+  background-position: center;
+  transform: rotate(-3.5deg);
+  pointer-events: none;
+  z-index: 1;
+}
+
 .saw-divider-beam {
   position: absolute;
   left: -4%;
   right: -4%;
   top: 49%;
   height: 2.5px;
+  z-index: 2;
   background: linear-gradient(90deg, transparent 0%, var(--saw-pink) 18%, var(--saw-rose) 50%, var(--saw-pink) 82%, transparent 100%);
   box-shadow: 0 0 14px var(--saw-glow);
   transform: rotate(-3.5deg) scaleX(0);
@@ -741,14 +776,119 @@ p {
 }
 
 /* ==========================================================================
-   Hero — Split Plane + Animated Pink Saw Kerf Sweep
+   Hero — Concrete in Deconstruction Backdrop + Split Plane + Pink Saw Kerf
    ========================================================================== */
+
+@keyframes deconSawPass {
+  0% {
+    transform: translate3d(0, 0, 0);
+    opacity: 0;
+  }
+  8% {
+    opacity: 1;
+  }
+  84% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(1800px, -110px, 0);
+    opacity: 0;
+  }
+}
+
+@keyframes rebarCutGlow {
+  0%, 100% {
+    opacity: 0.28;
+    filter: none;
+  }
+  12%, 22% {
+    opacity: 1;
+    filter: drop-shadow(0 0 8px #FF2E9F);
+  }
+  42% {
+    opacity: 0.34;
+    filter: none;
+  }
+}
+
+@keyframes concreteChipFloat {
+  from {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+  to {
+    transform: translate3d(2px, -6px, 0) rotate(3deg);
+  }
+}
+
+.concrete-decon-scene {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.concrete-decon-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.concrete-decon-banner .concrete-decon-svg {
+  opacity: 0.78;
+}
+
+.decon-slab-upper {
+  transform: translate3d(0, calc(var(--decon-parallax, 0px) * -0.35), 0);
+  will-change: transform;
+}
+
+.decon-slab-lower {
+  transform: translate3d(0, calc(var(--decon-parallax, 0px) * 0.35), 0);
+  will-change: transform;
+}
+
+.decon-core-ring {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: sawSpin 46s linear infinite;
+  will-change: transform;
+}
+
+.decon-saw-pass {
+  animation: deconSawPass 7.5s cubic-bezier(0.35, 0, 0.25, 1) infinite;
+  will-change: transform, opacity;
+}
+
+.rebar-cut-tip {
+  animation: rebarCutGlow 7.5s ease-in-out infinite;
+  animation-delay: var(--cut-delay, 0s);
+}
+
+.decon-chip {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: concreteChipFloat 10s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+.decon-chip:nth-child(2n) {
+  animation-duration: 12.5s;
+  animation-delay: -3.2s;
+}
 
 .hero {
   position: relative;
   padding: 3.5rem 0 4.5rem;
   overflow: hidden;
   border-bottom: 1px solid var(--steel-line);
+}
+
+.hero > .container,
+.page-banner > .container,
+.gateway-shell > .gateway-card {
+  position: relative;
+  z-index: 2;
 }
 
 @media (min-width: 1024px) {
@@ -766,6 +906,7 @@ p {
   border-radius: 999px;
   background: radial-gradient(circle, rgba(230, 0, 126, 0.17) 0%, rgba(230, 0, 126, 0) 68%);
   pointer-events: none;
+  z-index: 1;
 }
 
 .hero-grid {
@@ -1845,6 +1986,8 @@ p {
    ========================================================================== */
 
 .gateway-shell {
+  position: relative;
+  overflow: hidden;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -1893,6 +2036,8 @@ p {
 }
 
 .page-banner {
+  position: relative;
+  overflow: hidden;
   padding: 3.5rem 0 2.75rem;
   border-bottom: 1px solid var(--steel-line);
 }
@@ -1925,8 +2070,16 @@ p {
   .hero-saw-rotor,
   .hero-kerf-line,
   .hero-title-top,
-  .hero-title-bottom {
+  .hero-title-bottom,
+  .decon-saw-pass,
+  .rebar-cut-tip,
+  .decon-chip,
+  .decon-core-ring {
     animation: none !important;
+  }
+  .decon-slab-upper,
+  .decon-slab-lower {
+    transform: none !important;
   }
   .saw-divider-beam {
     transform: rotate(-3.5deg) scaleX(1) !important;
