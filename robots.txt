@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://actionsciage.com/sitemap.xml
+# AI / LLM discovery guide: https://actionsciage.com/llms.txt

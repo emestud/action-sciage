@@ -256,4 +256,75 @@
     }
     buildBrief();
   }
+
+  /* 6. Cross-Browser Spinning 20-Keyhole Pink Saw Favicon on Pure White Background */
+  if (!prefersReduced && typeof document.createElement === "function") {
+    var iconLink = document.querySelector('link[rel="icon"]');
+    var favCanvas = document.createElement("canvas");
+    if (iconLink && favCanvas.getContext) {
+      favCanvas.width = 64;
+      favCanvas.height = 64;
+      var fctx = favCanvas.getContext("2d");
+      var favAngle = 0;
+
+      function renderFaviconFrame() {
+        if (document.hidden) return;
+        fctx.clearRect(0, 0, 64, 64);
+        // Pure white rounded background
+        fctx.fillStyle = "#FFFFFF";
+        fctx.beginPath();
+        fctx.roundRect(0, 0, 64, 64, 14);
+        fctx.fill();
+
+        fctx.save();
+        fctx.translate(32, 32);
+        fctx.rotate(favAngle);
+
+        // Pink segmented diamond saw disc
+        fctx.fillStyle = "#E6007E";
+        fctx.beginPath();
+        fctx.arc(0, 0, 27, 0, Math.PI * 2);
+        fctx.fill();
+
+        // 20 white keyhole expansion slots around rim
+        fctx.fillStyle = "#FFFFFF";
+        for (var k = 0; k < 20; k++) {
+          var a = (k * Math.PI * 2) / 20;
+          fctx.save();
+          fctx.rotate(a);
+          fctx.fillRect(-0.8, -28.5, 1.6, 4.4);
+          fctx.beginPath();
+          fctx.arc(0, -24.2, 1.4, 0, Math.PI * 2);
+          fctx.fill();
+          fctx.restore();
+        }
+
+        // Tension rings so spin motion stays legible at 16px
+        fctx.strokeStyle = "#FFFFFF";
+        fctx.lineWidth = 2;
+        fctx.setLineDash([10, 12]);
+        fctx.beginPath();
+        fctx.arc(0, 0, 17, 0, Math.PI * 2);
+        fctx.stroke();
+        fctx.setLineDash([]);
+
+        // White arbor hole
+        fctx.fillStyle = "#FFFFFF";
+        fctx.strokeStyle = "#111317";
+        fctx.lineWidth = 2;
+        fctx.beginPath();
+        fctx.arc(0, 0, 5.5, 0, Math.PI * 2);
+        fctx.fill();
+        fctx.stroke();
+        fctx.restore();
+
+        iconLink.type = "image/png";
+        iconLink.href = favCanvas.toDataURL("image/png");
+        favAngle = (favAngle + 0.24) % (Math.PI * 2);
+      }
+
+      renderFaviconFrame();
+      window.setInterval(renderFaviconFrame, 120);
+    }
+  }
 })();

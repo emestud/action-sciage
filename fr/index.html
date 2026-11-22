@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Action Sciage — Sciage Diamant, Carottage &amp; Déconstruction Robotisée (Alsace 68)</title>
-  <meta name="description" content="Action Sciage à Wittenheim (68) : sciage au diamant, carottage dès 215 €, déconstruction robotisée Brokk, démolition intérieure et renfort carbone MAPEI en Alsace." />
+  <meta name="description" content="Action Sciage à Wittenheim (68) : sciage au diamant, carottage béton dès 215 €, déconstruction robotisée Brokk et renfort MAPEI en Alsace." />
   <meta name="robots" content="index, follow, max-image-preview:large" />
   <meta name="theme-color" content="#0E1013" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -16,13 +16,16 @@
   <link rel="alternate" hreflang="x-default" href="https://actionsciage.com/fr" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Action Sciage" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:locale:alternate" content="de_DE" />
   <meta property="og:title" content="Action Sciage — Sciage Diamant, Carottage &amp; Déconstruction Robotisée (Alsace 68)" />
-  <meta property="og:description" content="Action Sciage à Wittenheim (68) : sciage au diamant, carottage dès 215 €, déconstruction robotisée Brokk, démolition intérieure et renfort carbone MAPEI en Alsace." />
+  <meta property="og:description" content="Action Sciage à Wittenheim (68) : sciage au diamant, carottage béton dès 215 €, déconstruction robotisée Brokk et renfort MAPEI en Alsace." />
   <meta property="og:url" content="https://actionsciage.com/fr" />
   <meta property="og:image" content="https://actionsciage.com/images/og-image.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Action Sciage — Sciage Diamant, Carottage &amp; Déconstruction Robotisée (Alsace 68)" />
-  <meta name="twitter:description" content="Action Sciage à Wittenheim (68) : sciage au diamant, carottage dès 215 €, déconstruction robotisée Brokk, démolition intérieure et renfort carbone MAPEI en Alsace." />
+  <meta name="twitter:description" content="Action Sciage à Wittenheim (68) : sciage au diamant, carottage béton dès 215 €, déconstruction robotisée Brokk et renfort MAPEI en Alsace." />
   <meta name="twitter:image" content="https://actionsciage.com/images/og-image.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -31,76 +34,193 @@
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "HomeAndConstructionBusiness",
-  "name": "Action Sciage",
-  "legalName": "SARL Action Sciage",
-  "url": "https://actionsciage.com/fr",
-  "logo": "https://actionsciage.com/images/logo-action-sciage.svg",
-  "image": "https://actionsciage.com/images/og-image.png",
-  "description": "Entreprise spécialisée en sciage au diamant, carottage, déconstruction robotisée Brokk, démolition intérieure, renfort composite carbone MAPEI et travaux amiante sous-section 4 en Alsace et Trois Frontières.",
-  "telephone": "+33369761690",
-  "email": "contact@action-sciage.fr",
-  "foundingDate": "2018-05-16",
-  "founder": {
-    "@type": "Person",
-    "name": "Lucas Gaidella"
-  },
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "9 impasse des Crêtes",
-    "postalCode": "68270",
-    "addressLocality": "Wittenheim",
-    "addressRegion": "Haut-Rhin",
-    "addressCountry": "FR"
-  },
-  "areaServed": [
-    "Haut-Rhin",
-    "Bas-Rhin",
-    "Territoire de Belfort",
-    "Franche-Comté",
-    "Basel",
-    "Südbaden"
-  ],
-  "openingHoursSpecification": [
+  "@graph": [
     {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": [
-        "Monday",
-        "Tuesday",
-        "Thursday",
-        "Friday"
+      "@type": "HomeAndConstructionBusiness",
+      "@id": "https://actionsciage.com/#organization",
+      "name": "Action Sciage",
+      "legalName": "SARL Action Sciage",
+      "url": "https://actionsciage.com/fr",
+      "logo": "https://actionsciage.com/images/logo-action-sciage.svg",
+      "image": "https://actionsciage.com/images/og-image.png",
+      "description": "Entreprise spécialisée en sciage au diamant, carottage, déconstruction robotisée Brokk, démolition intérieure, renfort composite carbone MAPEI et travaux amiante sous-section 4 en Alsace et Trois Frontières.",
+      "telephone": "+33369761690",
+      "email": "contact@action-sciage.fr",
+      "foundingDate": "2018-05-16",
+      "knowsLanguage": [
+        "fr",
+        "en",
+        "de"
       ],
-      "opens": "09:00",
-      "closes": "12:30"
+      "founder": {
+        "@type": "Person",
+        "name": "Lucas Gaidella"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "9 impasse des Crêtes",
+        "postalCode": "68270",
+        "addressLocality": "Wittenheim",
+        "addressRegion": "Haut-Rhin",
+        "addressCountry": "FR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 47.8096,
+        "longitude": 7.3371
+      },
+      "areaServed": [
+        "Wittenheim",
+        "Mulhouse",
+        "Colmar",
+        "Saint-Louis",
+        "Guebwiller",
+        "Cernay",
+        "Altkirch",
+        "Haut-Rhin",
+        "Bas-Rhin",
+        "Strasbourg",
+        "Territoire de Belfort",
+        "Besançon",
+        "Basel",
+        "Südbaden"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Services Action Sciage",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Déconstruction Robotisée Brokk"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Sciage Diamant & Carottage"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Démolition Intérieure & Curage"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Renfort Carbone MAPEI & SS4"
+            }
+          }
+        ]
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "09:00",
+          "closes": "12:30"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "14:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Saturday"
+          ],
+          "opens": "09:00",
+          "closes": "11:00"
+        }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/actionsciage/"
+      ]
     },
     {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": [
-        "Monday",
-        "Tuesday",
-        "Thursday",
-        "Friday"
-      ],
-      "opens": "14:00",
-      "closes": "18:00"
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://actionsciage.com/fr"
+        }
+      ]
     },
     {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": [
-        "Saturday"
-      ],
-      "opens": "09:00",
-      "closes": "11:00"
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Combien coûte un carottage béton dans le Haut-Rhin (68) ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pour un carottage Ø 200 mm dans 20 cm d'épaisseur, Action Sciage propose la prestation clé en main à environ 215 € (75 € de percement + 140 à 160 € de déplacement dans le 68), soit le même budget qu'une location seule, sans caution ni risque de casse."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Dans quelles villes et régions intervenez-vous ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Basés au 9 impasse des Crêtes à Wittenheim (68270), nous intervenons rapidement dans tout le Haut-Rhin (Mulhouse, Colmar, Guebwiller, Cernay, Altkirch, Saint-Louis), le Bas-Rhin (Strasbourg, Sélestat), le Territoire de Belfort (90), la Franche-Comté (Besançon) ainsi qu'en zone frontalière Bâle (CH) et Südbaden (DE)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Pourquoi choisir un robot de déconstruction électrique Brokk ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Radiocommandés à distance, nos robots électriques Brokk n'émettent aucun gaz d'échappement et travaillent sans vibration excessive dans les espaces confinés, sous-sols, hôpitaux, usines ou commerces en site occupé."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Pouvez-vous ouvrir un mur porteur et poser des renforts carbone ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui. En coordination avec les bureaux d'études structures et notre partenaire MAPEI, nous réalisons l'ouverture au diamant (baies, trémies, reprises en sous-œuvre) puis la pose de plats en composite carbone."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Intervenez-vous sur des matériaux contenant de l'amiante ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nos équipes qualifiées sont habilitées pour la réalisation de travaux en sous-section 4 (SS4), notamment les carottages et découpes confinées en présence d'amiante."
+          }
+        }
+      ]
     }
-  ],
-  "sameAs": [
-    "https://www.facebook.com/actionsciage/"
   ]
 }
 </script>
 </head>
 <body>
   <header class="site-header">
+    <div class="mobile-top-callbar">
+      <span class="mobile-callbar-loc"><span class="kicker-dot"></span>Wittenheim · Alsace (68)</span>
+      <a class="mobile-callbar-num" href="tel:+33369761690">☎ 03 69 76 16 90</a>
+    </div>
     <div class="header-inner">
       <a class="brand" href="/fr" aria-label="Action Sciage">
         <svg class="official-logo-svg header-official-logo" viewBox="0 0 552.9 295.1" fill="none" role="img" aria-label="Action Sciage — Refaire le monde avec des scies !">
@@ -113,7 +233,6 @@
     <line class="logo-kerf-glint" x1="286" y1="162" x2="532" y2="145" stroke="#FFF2F8" stroke-width="1.8" stroke-linecap="round"/>
   </g>
 </svg>
-        <span class="brand-sub-tag">Sciage · Carottage · Brokk</span>
       </a>
 
       <nav class="nav-links" aria-label="Main navigation">
@@ -124,7 +243,7 @@
         <div class="lang-switch" aria-label="Language switch">
           <a href="/fr" hreflang="fr" class="active">FR</a><a href="/en" hreflang="en">EN</a><a href="/de" hreflang="de">DE</a>
         </div>
-        <a class="header-phone" href="tel:+33369761690">03 69 76 16 90</a>
+        <a class="header-phone" href="tel:+33369761690">☎ 03 69 76 16 90</a>
         <a class="btn btn-pink btn-sm header-cta" href="/fr/contact">Devis Gratuit</a>
         <button class="menu-toggle" id="menuOpenBtn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="mobileDrawer">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
@@ -184,7 +303,8 @@
       </p>
       <div class="hero-cta-group">
         <a class="btn btn-pink" href="/fr/contact">Demander un devis gratuit →</a>
-        <a class="btn btn-outline-light" href="/fr/realisations">Voir nos réalisations</a>
+        <a class="btn btn-outline-light" href="tel:+33369761690">☎ 03 69 76 16 90</a>
+        <a class="btn btn-outline-light" href="/fr/realisations">Nos réalisations</a>
       </div>
       <div class="hero-metrics">
         <div class="hero-metric"><strong>Depuis 2018</strong><span>Équipe alsacienne réactive</span></div>
@@ -194,15 +314,6 @@
     </div>
 
     <div class="hero-stage">
-      <div class="hero-photo-frame">
-        <img src="/images/hero-robotic-deconstruction.jpg" alt="Action Sciage — déconstruction robotisée et sciage diamant dans le Haut-Rhin" />
-        <div class="hero-photo-overlay"></div>
-        <div class="hero-photo-kerf"></div>
-        <div class="hero-photo-caption">
-          <strong>Wittenheim · Haut-Rhin (68)</strong>
-          <span>Qualibat 1142 · SEDDRe · SS4 · MAPEI</span>
-        </div>
-      </div>
       <div class="hero-logo-emblem" title="Action Sciage — Logo Officiel Animé"><svg class="official-logo-svg hero-official-logo" viewBox="0 0 552.9 295.1" fill="none" role="img" aria-label="Action Sciage — Refaire le monde avec des scies !">
   <g class="logo-blade-rotor">
     <path fill="#E6007E" d="M277.60,1.94 L277.60,12.36 A4.70,4.70 0 1,0 284.00,12.36 L284.00,1.94 A145.65,145.65 0 0,1 322.75,8.07 L319.53,17.99 A4.70,4.70 0 1,0 325.62,19.97 L328.84,10.05 A145.65,145.65 0 0,1 363.80,27.86 L357.67,36.30 A4.70,4.70 0 1,0 362.85,40.06 L368.98,31.63 A145.65,145.65 0 0,1 396.72,59.37 L388.29,65.50 A4.70,4.70 0 1,0 392.05,70.68 L400.49,64.55 A145.65,145.65 0 0,1 418.30,99.51 L408.38,102.73 A4.70,4.70 0 1,0 410.36,108.82 L420.28,105.60 A145.65,145.65 0 0,1 426.41,144.35 L415.99,144.35 A4.70,4.70 0 1,0 415.99,150.75 L426.41,150.75 A145.65,145.65 0 0,1 420.28,189.50 L410.36,186.28 A4.70,4.70 0 1,0 408.38,192.37 L418.30,195.59 A145.65,145.65 0 0,1 400.49,230.55 L392.05,224.42 A4.70,4.70 0 1,0 388.29,229.60 L396.72,235.73 A145.65,145.65 0 0,1 368.98,263.47 L362.85,255.04 A4.70,4.70 0 1,0 357.67,258.80 L363.80,267.24 A145.65,145.65 0 0,1 328.84,285.05 L325.62,275.13 A4.70,4.70 0 1,0 319.53,277.11 L322.75,287.03 A145.65,145.65 0 0,1 284.00,293.16 L284.00,282.74 A4.70,4.70 0 1,0 277.60,282.74 L277.60,293.16 A145.65,145.65 0 0,1 238.85,287.03 L242.07,277.11 A4.70,4.70 0 1,0 235.98,275.13 L232.76,285.05 A145.65,145.65 0 0,1 197.80,267.24 L203.93,258.80 A4.70,4.70 0 1,0 198.75,255.04 L192.62,263.47 A145.65,145.65 0 0,1 164.88,235.73 L173.31,229.60 A4.70,4.70 0 1,0 169.55,224.42 L161.11,230.55 A145.65,145.65 0 0,1 143.30,195.59 L153.22,192.37 A4.70,4.70 0 1,0 151.24,186.28 L141.32,189.50 A145.65,145.65 0 0,1 135.19,150.75 L145.61,150.75 A4.70,4.70 0 1,0 145.61,144.35 L135.19,144.35 A145.65,145.65 0 0,1 141.32,105.60 L151.24,108.82 A4.70,4.70 0 1,0 153.22,102.73 L143.30,99.51 A145.65,145.65 0 0,1 161.11,64.55 L169.55,70.68 A4.70,4.70 0 1,0 173.31,65.50 L164.88,59.37 A145.65,145.65 0 0,1 192.62,31.63 L198.75,40.06 A4.70,4.70 0 1,0 203.93,36.30 L197.80,27.86 A145.65,145.65 0 0,1 232.76,10.05 L235.98,19.97 A4.70,4.70 0 1,0 242.07,17.99 L238.85,8.07 A145.65,145.65 0 0,1 277.60,1.94 Z"/>
@@ -213,6 +324,15 @@
     <line class="logo-kerf-glint" x1="286" y1="162" x2="532" y2="145" stroke="#FFF2F8" stroke-width="1.8" stroke-linecap="round"/>
   </g>
 </svg></div>
+      <div class="hero-photo-frame">
+        <img src="/images/hero-robotic-deconstruction.jpg" alt="Action Sciage — déconstruction robotisée et sciage diamant dans le Haut-Rhin" />
+        <div class="hero-photo-overlay"></div>
+        <div class="hero-photo-kerf"></div>
+        <div class="hero-photo-caption">
+          <strong>Wittenheim · Haut-Rhin (68)</strong>
+          <span>Qualibat 1142 · SEDDRe · SS4 · MAPEI</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -387,6 +507,21 @@
   </div>
 </section>
 
+<div class="saw-divider to-obsidian" aria-hidden="true"><div class="saw-divider-beam"></div></div>
+<section class="section-obsidian" id="faq">
+  <div class="container">
+    <div class="section-header">
+      <span class="kicker"><span class="kicker-dot"></span>FAQ TECHNIQUE // ALSACE &amp; TROIS FRONTIÈRES</span>
+      <h2 class="section-title" style="color:#FFFFFF;">Questions fréquentes sur nos chantiers</h2>
+    </div>
+    <div class="faq-list"><details class="faq-item" open><summary>Combien coûte un carottage béton dans le Haut-Rhin (68) ?</summary><div class="faq-body">Pour un carottage Ø 200 mm dans 20 cm d&#x27;épaisseur, Action Sciage propose la prestation clé en main à environ 215 € (75 € de percement + 140 à 160 € de déplacement dans le 68), soit le même budget qu&#x27;une location seule, sans caution ni risque de casse.</div></details>
+<details class="faq-item"><summary>Dans quelles villes et régions intervenez-vous ?</summary><div class="faq-body">Basés au 9 impasse des Crêtes à Wittenheim (68270), nous intervenons rapidement dans tout le Haut-Rhin (Mulhouse, Colmar, Guebwiller, Cernay, Altkirch, Saint-Louis), le Bas-Rhin (Strasbourg, Sélestat), le Territoire de Belfort (90), la Franche-Comté (Besançon) ainsi qu&#x27;en zone frontalière Bâle (CH) et Südbaden (DE).</div></details>
+<details class="faq-item"><summary>Pourquoi choisir un robot de déconstruction électrique Brokk ?</summary><div class="faq-body">Radiocommandés à distance, nos robots électriques Brokk n&#x27;émettent aucun gaz d&#x27;échappement et travaillent sans vibration excessive dans les espaces confinés, sous-sols, hôpitaux, usines ou commerces en site occupé.</div></details>
+<details class="faq-item"><summary>Pouvez-vous ouvrir un mur porteur et poser des renforts carbone ?</summary><div class="faq-body">Oui. En coordination avec les bureaux d&#x27;études structures et notre partenaire MAPEI, nous réalisons l&#x27;ouverture au diamant (baies, trémies, reprises en sous-œuvre) puis la pose de plats en composite carbone.</div></details>
+<details class="faq-item"><summary>Intervenez-vous sur des matériaux contenant de l&#x27;amiante ?</summary><div class="faq-body">Nos équipes qualifiées sont habilitées pour la réalisation de travaux en sous-section 4 (SS4), notamment les carottages et découpes confinées en présence d&#x27;amiante.</div></details></div>
+  </div>
+</section>
+
   </main>
 
   <footer class="site-footer">
@@ -428,7 +563,7 @@
   </footer>
 
   <nav class="mobile-dock" aria-label="Quick actions">
-    <a href="tel:+33369761690">Appeler</a>
+    <a href="tel:+33369761690">☎ 03 69 76 16 90</a>
     <a href="mailto:contact@action-sciage.fr">Email</a>
     <a class="dock-pink" href="/fr/contact">Devis Gratuit</a>
   </nav>

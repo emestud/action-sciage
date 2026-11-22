@@ -28,6 +28,24 @@
     },
     {
       "source": "/",
+      "has": [{ "type": "host", "value": "sciagebetonalsace.com" }],
+      "destination": "https://actionsciage.com/fr",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "sciagealsace.com" }],
+      "destination": "https://actionsciage.com/fr",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "demolitionalsace.com" }],
+      "destination": "https://actionsciage.com/fr",
+      "permanent": true
+    },
+    {
+      "source": "/",
       "destination": "/fr",
       "permanent": false
     },

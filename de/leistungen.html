@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Leistungen — Brokk-Robotik, Diamantsägen &amp; CFK | Action Sciage</title>
-  <meta name="description" content="Leistungsübersicht: Elektrische Brokk-Abbruchroboter, Diamantsägen, Kernbohrungen, Entkernung, MAPEI CFK-Lamellen &amp; SS4 Asbestarbeiten." />
+  <meta name="description" content="Leistungen von Action Sciage im Elsass &amp; Südbaden: Brokk-Abbruchroboter, Diamantsägen, Kernbohrungen, Entkernung, MAPEI CFK &amp; Asbest SS4." />
   <meta name="robots" content="index, follow, max-image-preview:large" />
   <meta name="theme-color" content="#0E1013" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -16,13 +16,16 @@
   <link rel="alternate" hreflang="x-default" href="https://actionsciage.com/fr/prestations" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Action Sciage" />
+  <meta property="og:locale" content="de_DE" />
+  <meta property="og:locale:alternate" content="fr_FR" />
+  <meta property="og:locale:alternate" content="en_US" />
   <meta property="og:title" content="Leistungen — Brokk-Robotik, Diamantsägen &amp; CFK | Action Sciage" />
-  <meta property="og:description" content="Leistungsübersicht: Elektrische Brokk-Abbruchroboter, Diamantsägen, Kernbohrungen, Entkernung, MAPEI CFK-Lamellen &amp; SS4 Asbestarbeiten." />
+  <meta property="og:description" content="Leistungen von Action Sciage im Elsass &amp; Südbaden: Brokk-Abbruchroboter, Diamantsägen, Kernbohrungen, Entkernung, MAPEI CFK &amp; Asbest SS4." />
   <meta property="og:url" content="https://actionsciage.com/de/leistungen" />
   <meta property="og:image" content="https://actionsciage.com/images/og-image.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Leistungen — Brokk-Robotik, Diamantsägen &amp; CFK | Action Sciage" />
-  <meta name="twitter:description" content="Leistungsübersicht: Elektrische Brokk-Abbruchroboter, Diamantsägen, Kernbohrungen, Entkernung, MAPEI CFK-Lamellen &amp; SS4 Asbestarbeiten." />
+  <meta name="twitter:description" content="Leistungen von Action Sciage im Elsass &amp; Südbaden: Brokk-Abbruchroboter, Diamantsägen, Kernbohrungen, Entkernung, MAPEI CFK &amp; Asbest SS4." />
   <meta name="twitter:image" content="https://actionsciage.com/images/og-image.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -31,76 +34,199 @@
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "HomeAndConstructionBusiness",
-  "name": "Action Sciage",
-  "legalName": "SARL Action Sciage",
-  "url": "https://actionsciage.com/de",
-  "logo": "https://actionsciage.com/images/logo-action-sciage.svg",
-  "image": "https://actionsciage.com/images/og-image.png",
-  "description": "Zertifizierter Fachbetrieb für Diamantsägen, Kernbohrungen, ferngesteuerte Brokk-Abbruchrobotik, Innenabbruch, MAPEI CFK-Verstärkung und SS4-Asbestarbeiten im Elsass und Dreiländereck.",
-  "telephone": "+33369761690",
-  "email": "contact@action-sciage.fr",
-  "foundingDate": "2018-05-16",
-  "founder": {
-    "@type": "Person",
-    "name": "Lucas Gaidella"
-  },
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "9 impasse des Crêtes",
-    "postalCode": "68270",
-    "addressLocality": "Wittenheim",
-    "addressRegion": "Haut-Rhin",
-    "addressCountry": "FR"
-  },
-  "areaServed": [
-    "Haut-Rhin",
-    "Bas-Rhin",
-    "Territoire de Belfort",
-    "Franche-Comté",
-    "Basel",
-    "Südbaden"
-  ],
-  "openingHoursSpecification": [
+  "@graph": [
     {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": [
-        "Monday",
-        "Tuesday",
-        "Thursday",
-        "Friday"
+      "@type": "HomeAndConstructionBusiness",
+      "@id": "https://actionsciage.com/#organization",
+      "name": "Action Sciage",
+      "legalName": "SARL Action Sciage",
+      "url": "https://actionsciage.com/de",
+      "logo": "https://actionsciage.com/images/logo-action-sciage.svg",
+      "image": "https://actionsciage.com/images/og-image.png",
+      "description": "Zertifizierter Fachbetrieb für Diamantsägen, Kernbohrungen, ferngesteuerte Brokk-Abbruchrobotik, Innenabbruch, MAPEI CFK-Verstärkung und SS4-Asbestarbeiten im Elsass und Dreiländereck.",
+      "telephone": "+33369761690",
+      "email": "contact@action-sciage.fr",
+      "foundingDate": "2018-05-16",
+      "knowsLanguage": [
+        "fr",
+        "en",
+        "de"
       ],
-      "opens": "09:00",
-      "closes": "12:30"
+      "founder": {
+        "@type": "Person",
+        "name": "Lucas Gaidella"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "9 impasse des Crêtes",
+        "postalCode": "68270",
+        "addressLocality": "Wittenheim",
+        "addressRegion": "Haut-Rhin",
+        "addressCountry": "FR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 47.8096,
+        "longitude": 7.3371
+      },
+      "areaServed": [
+        "Wittenheim",
+        "Mulhouse",
+        "Colmar",
+        "Saint-Louis",
+        "Guebwiller",
+        "Cernay",
+        "Altkirch",
+        "Haut-Rhin",
+        "Bas-Rhin",
+        "Strasbourg",
+        "Territoire de Belfort",
+        "Besançon",
+        "Basel",
+        "Südbaden"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Services Action Sciage",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Brokk Abbruchrobotik"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Diamantsägen & Kernbohrungen"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Innenabbruch & Entkernung"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "MAPEI CFK-Verstärkung & SS4"
+            }
+          }
+        ]
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "09:00",
+          "closes": "12:30"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "14:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Saturday"
+          ],
+          "opens": "09:00",
+          "closes": "11:00"
+        }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/actionsciage/"
+      ]
     },
     {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": [
-        "Monday",
-        "Tuesday",
-        "Thursday",
-        "Friday"
-      ],
-      "opens": "14:00",
-      "closes": "18:00"
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Startseite",
+          "item": "https://actionsciage.com/de"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Leistungen",
+          "item": "https://actionsciage.com/de/leistungen"
+        }
+      ]
     },
     {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": [
-        "Saturday"
-      ],
-      "opens": "09:00",
-      "closes": "11:00"
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Was kostet eine Kernbohrung im Elsass (Haut-Rhin 68)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Für eine Kernbohrung Ø 200 mm / 20 cm bietet Action Sciage das Komplettpaket für ca. 215 € (75 € Bohrung + 140–160 € Anfahrt im Dept. 68) — zum gleichen Preis wie eine Gerätemiete ohne Kaution oder Bruchrisiko."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "In welchen Regionen und Grenzgebieten sind Sie im Einsatz?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Von Wittenheim (68270) aus arbeiten wir im gesamten Haut-Rhin (Mulhouse, Colmar, Saint-Louis), Bas-Rhin (Straßburg), Belfort (90), Franche-Comté (Besançon) sowie grenzüberschreitend im Raum Basel (CH) und Südbaden (DE)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Welche Vorteile bieten elektrische Brokk-Abbruchroboter?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Unsere funkferngesteuerten Brokk-Roboter arbeiten völlig abgasfrei, kompakt und erschütterungsarm — ideal für Innenräume, Kliniken, Tiefgaragen, Industriebetriebe und geringe Deckenlasten."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Übernehmen Sie Wanddurchbrüche samt Tragwerksverstärkung?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja. In Abstimmung mit Statikbüros und unserem Partner MAPEI sägen wir Öffnungen und Deckenaussparungen erschütterungsfrei und applizieren anschließend CFK-Kohlefaserlamellen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Dürfen Sie Arbeiten an asbesthaltigen Bauteilen ausführen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja. Unser Fachpersonal ist nach französischem Standard Unterabschnitt 4 (SS4) für staubgeschützte Bohr- und Sägearbeiten an asbesthaltigen Materialien zertifiziert."
+          }
+        }
+      ]
     }
-  ],
-  "sameAs": [
-    "https://www.facebook.com/actionsciage/"
   ]
 }
 </script>
 </head>
 <body>
   <header class="site-header">
+    <div class="mobile-top-callbar">
+      <span class="mobile-callbar-loc"><span class="kicker-dot"></span>Wittenheim · Elsass (68)</span>
+      <a class="mobile-callbar-num" href="tel:+33369761690">☎ 03 69 76 16 90</a>
+    </div>
     <div class="header-inner">
       <a class="brand" href="/de" aria-label="Action Sciage">
         <svg class="official-logo-svg header-official-logo" viewBox="0 0 552.9 295.1" fill="none" role="img" aria-label="Action Sciage — Refaire le monde avec des scies !">
@@ -113,7 +239,6 @@
     <line class="logo-kerf-glint" x1="286" y1="162" x2="532" y2="145" stroke="#FFF2F8" stroke-width="1.8" stroke-linecap="round"/>
   </g>
 </svg>
-        <span class="brand-sub-tag">Diamantsägen · Kernbohrung · Brokk</span>
       </a>
 
       <nav class="nav-links" aria-label="Main navigation">
@@ -124,7 +249,7 @@
         <div class="lang-switch" aria-label="Language switch">
           <a href="/fr/prestations" hreflang="fr">FR</a><a href="/en/services" hreflang="en">EN</a><a href="/de/leistungen" hreflang="de" class="active">DE</a>
         </div>
-        <a class="header-phone" href="tel:+33369761690">03 69 76 16 90</a>
+        <a class="header-phone" href="tel:+33369761690">☎ 03 69 76 16 90</a>
         <a class="btn btn-pink btn-sm header-cta" href="/de/kontakt">Angebot anfordern</a>
         <button class="menu-toggle" id="menuOpenBtn" type="button" aria-label="Menü" aria-expanded="false" aria-controls="mobileDrawer">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
@@ -231,6 +356,21 @@
   </div>
 </section>
 
+<div class="saw-divider to-obsidian" aria-hidden="true"><div class="saw-divider-beam"></div></div>
+<section class="section-obsidian" id="faq">
+  <div class="container">
+    <div class="section-header">
+      <span class="kicker"><span class="kicker-dot"></span>TECHNISCHE FAQ // ELSASS &amp; DREILÄNDERECK</span>
+      <h2 class="section-title" style="color:#FFFFFF;">Häufige Fragen zu unseren Einsätzen</h2>
+    </div>
+    <div class="faq-list"><details class="faq-item" open><summary>Was kostet eine Kernbohrung im Elsass (Haut-Rhin 68)?</summary><div class="faq-body">Für eine Kernbohrung Ø 200 mm / 20 cm bietet Action Sciage das Komplettpaket für ca. 215 € (75 € Bohrung + 140–160 € Anfahrt im Dept. 68) — zum gleichen Preis wie eine Gerätemiete ohne Kaution oder Bruchrisiko.</div></details>
+<details class="faq-item"><summary>In welchen Regionen und Grenzgebieten sind Sie im Einsatz?</summary><div class="faq-body">Von Wittenheim (68270) aus arbeiten wir im gesamten Haut-Rhin (Mulhouse, Colmar, Saint-Louis), Bas-Rhin (Straßburg), Belfort (90), Franche-Comté (Besançon) sowie grenzüberschreitend im Raum Basel (CH) und Südbaden (DE).</div></details>
+<details class="faq-item"><summary>Welche Vorteile bieten elektrische Brokk-Abbruchroboter?</summary><div class="faq-body">Unsere funkferngesteuerten Brokk-Roboter arbeiten völlig abgasfrei, kompakt und erschütterungsarm — ideal für Innenräume, Kliniken, Tiefgaragen, Industriebetriebe und geringe Deckenlasten.</div></details>
+<details class="faq-item"><summary>Übernehmen Sie Wanddurchbrüche samt Tragwerksverstärkung?</summary><div class="faq-body">Ja. In Abstimmung mit Statikbüros und unserem Partner MAPEI sägen wir Öffnungen und Deckenaussparungen erschütterungsfrei und applizieren anschließend CFK-Kohlefaserlamellen.</div></details>
+<details class="faq-item"><summary>Dürfen Sie Arbeiten an asbesthaltigen Bauteilen ausführen?</summary><div class="faq-body">Ja. Unser Fachpersonal ist nach französischem Standard Unterabschnitt 4 (SS4) für staubgeschützte Bohr- und Sägearbeiten an asbesthaltigen Materialien zertifiziert.</div></details></div>
+  </div>
+</section>
+
   </main>
 
   <footer class="site-footer">
@@ -272,7 +412,7 @@
   </footer>
 
   <nav class="mobile-dock" aria-label="Quick actions">
-    <a href="tel:+33369761690">Anrufen</a>
+    <a href="tel:+33369761690">☎ 03 69 76 16 90</a>
     <a href="mailto:contact@action-sciage.fr">E-Mail</a>
     <a class="dock-pink" href="/de/kontakt">Angebot</a>
   </nav>
